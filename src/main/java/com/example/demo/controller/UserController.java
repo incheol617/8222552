@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@RequestMapping("/api/vi/user")
+@RequestMapping("/api/v1/user")
 @RestController
 public class UserController {
 	
