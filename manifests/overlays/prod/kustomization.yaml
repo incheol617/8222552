@@ -1,7 +1,7 @@
 configMapGenerator:
 - files:
   - application.yml
-  name: 82225592-configmap
+  name: "troubleshooting-configmap"
 resources:
 - ../../base
 - pvc.yaml
@@ -12,5 +12,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namePrefix: prod-
 images:
-- name: cepgstapacr.azurecr.io/82225592
-  newTag: "202411270606"
+
+- name: cepgstapacr.azurecr.io/troubleshooting
+  newTag: "202408120727"
