@@ -31,4 +31,5 @@ management:
         include: "*"
 
 pvc:
-  path: /mnt/cloud-sample
+  path: /mnt/app-82225592
+  # path: /mnt/cloud-sample
