@@ -18,3 +18,5 @@ images:
   newTag: latest
 - name: cepgstapacr.azurecr.io/82225592
   newTag: "202411280211"
+- name: cepgstapacr.azurecr.io/troubleshooting
+  newTag: "202411280333"
