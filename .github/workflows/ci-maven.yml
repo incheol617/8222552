@@ -39,18 +39,18 @@ jobs:
 
     - name: 'Build & Tag Image'
       run: |
-            docker build -t ${{ secrets.BASEACR_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:latest .
+            docker build -t ${{ secrets.BASEACR_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:latest 
             docker tag ${{ secrets.BASEACR_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:latest ${{ secrets.CICDACR_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:latest
 
     - name: 'Push image'
       uses: azure/docker-login@v1
       with:
-        login-server: ${{ secrets.BASEACR_LOGIN_SERVER }}
+        login-server: ${{ secrets.CICDACR_LOGIN_SERVER }}
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
     
     - run: |
-          docker push ${{ secrets.BASEACR_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:latest
+          docker push ${{ secrets.CICDACR_LOGIN_SERVER  }}/${{ env.IMAGE_NAME }}:latest
 
     - name: Update Kubernetes resources
       run: |
